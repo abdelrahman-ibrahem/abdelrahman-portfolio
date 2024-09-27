@@ -251,11 +251,9 @@ nav ul.open {
 
 /* End About */
 /* Start Skills */
-
 .skills {
     padding: 2rem 0;
     width: 100%;
-    height: 100vh;
     background-color: #f9f9f9;
 }
 
@@ -285,6 +283,7 @@ nav ul.open {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
+    width: 100%;
 }
 
 .skill {
@@ -330,14 +329,18 @@ nav ul.open {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
+
 /* End Skills */
 /* Start Experiance */
 /* General Styling */
+/* Experience Section */
 .experience-section {
     padding: 4rem 1rem;
     width: 100%;
-    height: 100vh;
     background-color: #fff;
+    display: flex;           /* Use Flexbox for layout */
+    flex-direction: column;  /* Align items in a column */
+    align-items: center;     /* Center content horizontally */
 }
 
 .container {
@@ -355,7 +358,6 @@ nav ul.open {
 /* Experience Cards */
 .experience-cards {
     display: flex;
-    flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
 }
@@ -393,7 +395,8 @@ nav ul.open {
     margin-bottom: 0.5rem;
 }
 
-.experience-duration, .location {
+.experience-duration,
+.location {
     display: block;
     font-size: 14px;
     color: #777;
@@ -408,20 +411,22 @@ nav ul.open {
 
 @media screen and (max-width: 768px) {
     .experience-cards {
-        flex-direction: column;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
         gap: 1.5rem;
         align-items: center;
     }
 }
 
-/* End Experiance */
-/* Start contact */
+/* Contact Section */
 .contact-section {
     padding: 4rem 1rem;
     width: 100%;
-    height: 100vh;
     background-color: #f8f8f8;
     text-align: center;
+    display: flex;           /* Use Flexbox for layout */
+    flex-direction: column;  /* Align items in a column */
+    align-items: center;     /* Center content horizontally */
 }
 
 .contact-section .container {
@@ -487,7 +492,8 @@ nav ul.open {
     max-width: 600px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 1rem;
     border: 1px solid #ddd;
@@ -499,7 +505,8 @@ nav ul.open {
     transition: border 0.3s ease;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
     border-color: #4CAF50;
 }
 
@@ -527,10 +534,12 @@ nav ul.open {
     .contact-form {
         width: 100%;
     }
+
     .contact-section {
         padding: 2rem 1rem;
     }
 }
+
 /* End contact */
 .footer {
     background: #444;
